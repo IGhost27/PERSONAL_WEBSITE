@@ -9,6 +9,7 @@ export function Navbar() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const location = useLocation()
+  const isOverDarkHero = location.pathname === '/' || location.pathname === '/fitout'
 
   useEffect(() => { setOpen(false); window.scrollTo({ top: 0, behavior: 'instant' }) }, [location.pathname])
   useEffect(() => {
@@ -19,7 +20,7 @@ export function Navbar() {
   }, [])
 
   return (
-    <header className={`site-nav ${scrolled ? 'is-scrolled' : ''}`}>
+    <header className={`site-nav ${isOverDarkHero ? 'is-over-dark' : 'is-over-light'} ${scrolled ? 'is-scrolled' : ''}`}>
       <Link className="brand" to="/" aria-label="Home"><span>{site.initials}</span>{site.name}</Link>
       <nav aria-label="Main navigation" className={open ? 'is-open' : ''}>
         {links.map(([label, href]) => <NavLink key={href} to={href}>{label}</NavLink>)}

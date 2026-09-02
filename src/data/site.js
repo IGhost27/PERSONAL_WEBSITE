@@ -1,6 +1,6 @@
 export const site = {
-  name: 'Your Name',
-  initials: 'YN',
+  name: 'Ian Ortega',
+  initials: 'INO',
   email: 'hello@example.com',
   title: 'Engineer, Builder, Explorer',
   description: 'Engineering, artificial intelligence, research, leadership, and exploration.',
