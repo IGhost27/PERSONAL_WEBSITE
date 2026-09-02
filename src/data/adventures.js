@@ -1,0 +1,32 @@
+export const adventures = [
+  {
+    slug: 'adventure-one',
+    title: 'Adventure or Expedition',
+    type: 'Hiking / Travel / Challenge',
+    location: 'Location',
+    year: '20XX',
+    description: 'Replace with a short story about the place, challenge, and what stayed with you.',
+    image: '',
+    youtube: '',
+  },
+  {
+    slug: 'training-story',
+    title: 'Training or Human Performance Story',
+    type: 'Training',
+    location: 'Location',
+    year: '20XX',
+    description: 'Replace with a concise account of the goal, discipline, and lesson.',
+    image: '',
+    youtube: '',
+  },
+  {
+    slug: 'travel-story',
+    title: 'Travel Story',
+    type: 'Exploration',
+    location: 'Location',
+    year: '20XX',
+    description: 'Replace with a short observation from a meaningful journey.',
+    image: '',
+    youtube: '',
+  },
+]
