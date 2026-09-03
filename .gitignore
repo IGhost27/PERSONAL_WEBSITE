@@ -6,4 +6,6 @@ dist/
 Thumbs.db
 .codex/
 .impeccable/
-/public/images/Pictures/
+/public/images/Pictures/*
+!/public/images/Pictures/Turtle_Enhanced.png
+!/public/images/Pictures/headshot_enhanced.png
