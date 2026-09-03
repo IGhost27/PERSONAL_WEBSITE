@@ -283,7 +283,7 @@ h1, h2, h3 { font-family: "Bahnschrift Condensed", "Aptos Display", sans-serif; 
 .human-hero .hero-content { padding-bottom: 8vh; }
 .human-hero h1 { width: min-content; font-size: clamp(5.6rem, 12vw, 11.5rem); line-height: .76; }
 .human-hero .hero-copy { max-width: 530px; margin-left: min(29vw, 390px); font-size: clamp(1.05rem, 1.4vw, 1.28rem); }
-.hero-field-note { position: absolute; left: auto; right: max(36px, calc((100% - 1380px) / 2)); top: 20%; z-index: 2; width: 230px; padding: 13px 0 13px 16px; border-left: 3px solid var(--orange); border-top: 1px solid rgba(255,255,255,.34); border-bottom: 1px solid rgba(255,255,255,.34); color: #f5f3ec; font-family: Consolas, monospace; text-transform: uppercase; }
+.hero-field-note { position: absolute; left: auto; right: 0; top: 20%; z-index: 2; width: 230px; padding: 13px 0 13px 16px; border-left: 3px solid var(--orange); border-top: 1px solid rgba(255,255,255,.34); border-bottom: 1px solid rgba(255,255,255,.34); color: #f5f3ec; font-family: Consolas, monospace; text-transform: uppercase; }
 .hero-field-note > div { display: flex; justify-content: space-between; margin-bottom: 14px; color: #aeb8b0; font-size: .58rem; letter-spacing: .08em; }
 .hero-field-note strong { display: block; font-size: .92rem; line-height: 1.45; letter-spacing: .04em; }
 .hero-field-note p { margin: 14px 0 0; color: #aeb8b0; font-size: .58rem; line-height: 1.55; letter-spacing: .08em; }
@@ -329,7 +329,7 @@ h1, h2, h3 { font-family: "Bahnschrift Condensed", "Aptos Display", sans-serif; 
 @media (max-width: 900px) {
   .human-hero h1 { font-size: clamp(5rem, 19vw, 8rem); }
   .human-hero .hero-copy { margin-left: 0; }
-  .hero-field-note { left: auto; right: 18px; top: 14%; width: 195px; }
+  .hero-field-note { left: auto; right: 0; top: 14%; width: 195px; }
   .human-intro, .qualities-section > header, .range-band header, .instincts-section, .home-ending > header { grid-template-columns: 1fr; gap: 35px; }
   .human-intro { padding-block: 105px; }
   .human-intro p { margin-left: 0; }
