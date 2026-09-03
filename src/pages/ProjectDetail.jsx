@@ -1,14 +1,14 @@
-import { ArrowLeft, ArrowUpRight, Github } from 'lucide-react'
+import { ArrowLeft, ArrowUpRight } from 'lucide-react'
 import { Link, useParams } from 'react-router-dom'
 import { MediaPlaceholder } from '../components/MediaPlaceholder'
 import { Seo } from '../components/Seo'
 import { projects } from '../data/projects'
-import { NotFound } from './NotFound'
+
+const chapters = [['The context', 'problem'], ['My role', 'role'], ['The approach', 'approach'], ['The build', 'details'], ['Results', 'results'], ['What I learned', 'lessons']]
 
 export function ProjectDetail() {
   const { slug } = useParams()
   const project = projects.find((item) => item.slug === slug)
-  if (!project) return <NotFound />
-  const sections = [['The problem', project.problem], ['My approach', project.approach], ['Engineering details', project.details], ['Challenges', project.challenges], ['Results', project.results], ['Impact', project.impact], ['Lessons learned', project.lessons]]
-  return <><Seo title={project.title} description={project.description} /><article className="case-study"><header className="case-hero page-shell"><Link className="text-link" to="/work"><ArrowLeft />All work</Link><div className="case-title"><div><p>{project.category} / {project.year}</p><h1>{project.title}</h1></div><p>{project.description}</p></div><MediaPlaceholder src={project.image} alt={`${project.title} hero visual`} label="Add project hero image" /></header><div className="case-body page-shell"><aside><strong>Role</strong><p>{project.role}</p><strong>Technologies</strong><ul>{project.technologies.map((item) => <li key={item}>{item}</li>)}</ul><div className="case-links">{project.links.github && <a href={project.links.github}><Github />GitHub</a>}{project.links.external && <a href={project.links.external}>Live project<ArrowUpRight /></a>}</div></aside><div className="case-narrative">{sections.map(([title, body]) => <section key={title}><h2>{title}</h2><p>{body}</p></section>)}<section><h2>Gallery</h2><div className="case-gallery"><MediaPlaceholder alt={`${project.title} detail one`} label="Add project detail" /><MediaPlaceholder alt={`${project.title} detail two`} label="Add project detail" /></div></section></div></div></article></>
+  if (!project) return <div className="not-found page-shell"><p>PROJECT NOT FOUND</p><h1>This path ends here.</h1><Link className="button button-primary" to="/projects">Back to projects</Link></div>
+  return <article className="case-page"><Seo title={`${project.title} | Ian Ortega`} description={project.description} /><header className="case-hero page-shell"><Link className="text-link back-link" to="/projects"><ArrowLeft /> All projects</Link><div className="case-heading"><div><span className="route-label">{project.category} / {project.year}</span><h1>{project.title}</h1></div><p>{project.question}</p></div><MediaPlaceholder src={project.image} alt={`${project.title} cover`} label={`Add ${project.title} hero media`} /></header><div className="case-layout page-shell"><aside><span>Case study</span><ul>{chapters.map(([label]) => <li key={label}>{label}</li>)}</ul><div className="case-links">{Object.entries(project.links).filter(([, value]) => value).map(([label, value]) => <a key={label} href={value} target="_blank" rel="noreferrer">{label}<ArrowUpRight /></a>)}</div></aside><div className="case-story"><section className="case-question"><span>The question</span><h2>{project.question}</h2></section>{chapters.map(([label, field]) => <section key={field}><span>{label}</span><h2>{label}</h2><p>{project[field]}</p></section>)}<section><span>Gallery / media</span><h2>The work, up close.</h2><div className="case-gallery"><MediaPlaceholder alt={`${project.title} process`} label="Add process photograph or diagram" /><MediaPlaceholder alt={`${project.title} detail`} label="Add result, CAD, or research figure" /></div></section></div></div></article>
 }

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/sitemap.xml
+Sitemap: https://ighost27.github.io/PERSONAL_WEBSITE/sitemap.xml
