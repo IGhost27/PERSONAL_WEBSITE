@@ -1,13 +1,40 @@
+# Dependencies
 node_modules/
+
+# Build output and caches
 dist/
 .vite/
+
+# Local environment files
+.env
+.env.*
+!.env.example
 *.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editors and operating systems
+.idea/
+.vscode/
 .DS_Store
 Thumbs.db
+
+# Local development tools
 .codex/
 .impeccable/
+
+# Keep unused personal photos out of Git while allowing deployed site assets.
 /public/images/Pictures/*
+!/public/images/Pictures/Allalinhorn_Summit.jpg
+!/public/images/Pictures/Construction.jpg
+!/public/images/Pictures/Test_Rig.jpg
 !/public/images/Pictures/Turtle_Enhanced.png
 !/public/images/Pictures/Turtle_Hero_Thirds.png
 !/public/images/Pictures/Turtle_Hero_Balanced.png
+!/public/images/Pictures/elbert_solo.png
 !/public/images/Pictures/headshot_enhanced.png
